@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp">
+
+        <TextView
+            android:id="@+id/tv_eqA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipo A"
+            android:textSize="35sp"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/tv_scrA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Score A"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp">
+
+        <TextView
+            android:id="@+id/tv_eqB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipo B"
+            android:textSize="35sp"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/tv_scrB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Score B"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
