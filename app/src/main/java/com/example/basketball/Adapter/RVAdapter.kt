@@ -1,6 +1,7 @@
 package com.example.basketball.Adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basketball.R
 import com.example.basketball.Room.Entities.Partido
+import kotlinx.android.synthetic.main.rv_content.view.*
 
 class RVAdapter internal constructor(context: Context, var clicklistener: (Partido) -> Unit) : RecyclerView.Adapter<RVAdapter.ViewHolder>(){
 
@@ -23,26 +25,21 @@ class RVAdapter internal constructor(context: Context, var clicklistener: (Parti
 
     override fun onBindViewHolder(holder: RVAdapter.ViewHolder, position: Int) {
         val current =  partidos[position]
+        Log.d("nigga", current.Ganador)
         holder.onBind(current, clicklistener)
     }
 
-    inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(item : View) : RecyclerView.ViewHolder(item){
 
         fun onBind(partido: Partido, clicklistener: (Partido) -> Unit){
-            equipoA.text = partido.EquipoA
-            equipoB.text = partido.EquipoB
-            scoreA.text = partido.ScoreA.toString()
-            scoreB.text = partido.ScoreB.toString()
+            itemView.tv_eqA.text = partido.EquipoA
+            itemView.tv_eqB.text = partido.EquipoB
+            itemView.tv_scrA.text = partido.ScoreA.toString()
+            itemView.tv_scrB.text = partido.ScoreB.toString()
         }
-
-        val equipoA : TextView = itemView.findViewById(R.id.tv_eqA)
-        val scoreA : TextView = itemView.findViewById(R.id.tv_scrA)
-        val equipoB : TextView = itemView.findViewById(R.id.tv_eqB)
-        val scoreB : TextView = itemView.findViewById(R.id.tv_scrB)
-
     }
 
-    internal  fun setPartidos(partidos: List<Partido>){
+    internal fun setPartidos(partidos: List<Partido>){
         this.partidos = partidos
         notifyDataSetChanged()
     }

@@ -2,10 +2,12 @@ package com.example.basketball.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.example.basketball.R
+import com.example.basketball.Room.Entities.Partido
 import com.example.basketball.ViewModel.PartidoViewModel
 import kotlinx.android.synthetic.main.activity_new_partido.*
 import kotlinx.android.synthetic.main.activity_new_partido.view.*
@@ -33,12 +35,6 @@ class NewPartido : AppCompatActivity() {
         var shf = SimpleDateFormat("HH:mm")
         var hrs = shf.format(cal.time)
 
-
-
-        fecha.text = fecha1.toString()
-        hora.text =  hrs.toString()
-
-
     }
 
     fun addone(view : View){
@@ -62,10 +58,25 @@ class NewPartido : AppCompatActivity() {
             add3B ->{
                 vmP.contB +=3
             }
+            save->{
+                var fecha = "${dtpicker.dayOfMonth}/${dtpicker.month}/${dtpicker.year}"
+                Log.d("fecha", "fecha: ${fecha}")
+                if(!eqA.text.equals("") && !eqB.text.equals("") && et_hora.text.toString()<"24" && et_min.text.toString()<"59"){
+                    var hora = "${et_hora.toString()}:${et_min.toString()}"
+                    var partido = Partido(eqA.text.toString(), vmP.contA, eqB.text.toString(), vmP.contB, eqA.text.toString(), fecha, hora)
+                    Toast.makeText(this, partido.Ganador, Toast.LENGTH_SHORT).show()
+                    vmP.insert(partido)
+                    Log.d("fecha", "insertado")
+                }else{
+                    Log.d("fecha", "no se guardo")
+                }
+
+            }
+
         }
 
         cptsA.text = vmP.contA.toString()
-        cptsB.text= vmP.contB.toString()
+        cptsB.text = vmP.contB.toString()
     }
 
 }
