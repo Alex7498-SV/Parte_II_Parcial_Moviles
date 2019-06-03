@@ -31,12 +31,14 @@ class RVAdapter internal constructor(context: Context, var clicklistener: (Parti
 
     inner class ViewHolder(item : View) : RecyclerView.ViewHolder(item){
 
-        fun onBind(partido: Partido, clicklistener: (Partido) -> Unit){
+        fun onBind ( partido : Partido, clickListener: (Partido) -> Unit) = with(itemView){
             itemView.tv_eqA.text = partido.EquipoA
             itemView.tv_eqB.text = partido.EquipoB
             itemView.tv_scrA.text = partido.ScoreA.toString()
             itemView.tv_scrB.text = partido.ScoreB.toString()
+            this.setOnClickListener { clickListener(partido) }
         }
+
     }
 
     internal fun setPartidos(partidos: List<Partido>){

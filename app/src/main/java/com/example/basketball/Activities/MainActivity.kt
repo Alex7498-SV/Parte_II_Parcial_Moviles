@@ -33,8 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.rv_partidos)
-        val adapter = RVAdapter(this, {partido : com.example.basketball.Room.Entities.Partido -> clickitem(partido)
-        })
+        val adapter = RVAdapter(this, {partido : com.example.basketball.Room.Entities.Partido -> clickitem(partido)})
 
         partidoViewModel.allPartidos.observe(this, Observer { partidos ->
             partidos?.let { adapter.setPartidos(it) }
@@ -44,12 +43,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickitem(partido: com.example.basketball.Room.Entities.Partido){
+
+        Toast.makeText(this@MainActivity, "tocado", Toast.LENGTH_SHORT ).show()
+
         val dlc = Bundle()
-
-        dlc.putParcelable("pedazo de mierda", partido)
-
-        val intent = Intent(this@MainActivity, Partido::class.java).putExtra("edu ed gay", dlc)
-        startActivity(intent)
+        dlc.putParcelable("partido", partido)
+        startActivity(Intent(this@MainActivity, Partido::class.java).putExtra("data", dlc))
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

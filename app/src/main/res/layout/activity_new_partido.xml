@@ -7,124 +7,125 @@
     >
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#00FFFFFF">
 
             <LinearLayout
-                android:layout_margin="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_alignParentLeft="true">
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true">
 
                 <EditText
-                    android:id="@+id/eqA"
-                    android:layout_margin="3sp"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Equipo #1"
-                    />
+                        android:id="@+id/eqA"
+                        android:layout_margin="3sp"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Equipo #1"
+                />
 
                 <TextView
-                    android:id="@+id/cptsA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="40sp"
-                    />
+                        android:id="@+id/cptsA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="40sp"
+                />
 
                 <Button
-                    android:id="@+id/add1A"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 1"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add1A"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 1"
+                        android:onClick="addone"
+                />
 
                 <Button
-                    android:id="@+id/add2A"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 2"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add2A"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 2"
+                        android:onClick="addone"
+                />
 
                 <Button
-                    android:id="@+id/add3A"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 3"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add3A"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 3"
+                        android:onClick="addone"
+                />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_margin="20sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_alignParentRight="true">
+                    android:layout_margin="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true">
 
                 <EditText
-                    android:id="@+id/eqB"
-                    android:layout_margin="3sp"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Equipo #1"
-                    />
+                        android:id="@+id/eqB"
+                        android:layout_margin="3sp"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Equipo #1"
+                />
 
                 <TextView
-                    android:id="@+id/cptsB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="40sp"
-                    />
+                        android:id="@+id/cptsB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="40sp"
+                />
 
                 <Button
-                    android:id="@+id/add1B"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 1"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add1B"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 1"
+                        android:onClick="addone"
+                />
 
                 <Button
-                    android:id="@+id/add2B"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 2"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add2B"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 2"
+                        android:onClick="addone"
+                />
 
                 <Button
-                    android:id="@+id/add3B"
-                    android:layout_margin="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Añadir 3"
-                    android:onClick="addone"
-                    />
+                        android:id="@+id/add3B"
+                        android:layout_margin="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir 3"
+                        android:onClick="addone"
+                />
 
 
             </LinearLayout>

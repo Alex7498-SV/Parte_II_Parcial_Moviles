@@ -61,9 +61,18 @@ class NewPartido : AppCompatActivity() {
             save->{
                 var fecha = "${dtpicker.dayOfMonth}/${dtpicker.month}/${dtpicker.year}"
                 Log.d("fecha", "fecha: ${fecha}")
-                if(!eqA.text.equals("") && !eqB.text.equals("") && et_hora.text.toString()<"24" && et_min.text.toString()<"59"){
-                    var hora = "${et_hora.toString()}:${et_min.toString()}"
+                if(!eqA.text.equals("") && !eqB.text.equals("") && et_hora.text.toString()<"24" && et_min.text.toString()<"59" && (vmP.contA > vmP.contB)){
+                    var hora = "${et_hora.text.toString()}:${et_min.text.toString()}"
                     var partido = Partido(eqA.text.toString(), vmP.contA, eqB.text.toString(), vmP.contB, eqA.text.toString(), fecha, hora)
+                    Toast.makeText(this, partido.Ganador, Toast.LENGTH_SHORT).show()
+                    vmP.insert(partido)
+                    Log.d("fecha", "insertado")
+                }else{
+                    Log.d("fecha", "no se guardo")
+                }
+                if(!eqA.text.equals("") && !eqB.text.equals("") && et_hora.text.toString()<"24" && et_min.text.toString()<"59" && (vmP.contA < vmP.contB)){
+                    var hora = "${et_hora.toString()}:${et_min.toString()}"
+                    var partido = Partido(eqA.text.toString(), vmP.contA, eqB.text.toString(), vmP.contB, eqB.text.toString(), fecha, hora)
                     Toast.makeText(this, partido.Ganador, Toast.LENGTH_SHORT).show()
                     vmP.insert(partido)
                     Log.d("fecha", "insertado")
