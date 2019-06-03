@@ -6,6 +6,7 @@ import com.example.basketball.R
 import com.example.basketball.Room.Entities.Partido
 import com.example.basketball.ViewModel.PartidoViewModel
 import kotlinx.android.synthetic.main.activity_partido.*
+import kotlinx.android.synthetic.main.rv_content.*
 
 class Partido : AppCompatActivity() {
 
@@ -19,8 +20,8 @@ class Partido : AppCompatActivity() {
 
         var partidazo : Partido = dlc.getParcelable("partido")
 
-        tv_eqA1.text = partidazo.EquipoA
-        tv_eqB1.text = partidazo.EquipoB
+        eqA1.text = partidazo.EquipoA
+        eqB1.text = partidazo.EquipoB
         tv_score1.text = partidazo.ScoreA.toString()
         tv_score2.text = partidazo.ScoreB.toString()
         tv_fecha.text = partidazo.fecha
